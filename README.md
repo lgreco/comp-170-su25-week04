@@ -52,34 +52,17 @@ that returns `True` if lists `foo` and `bar` have at least one element in common
 
 # Reflect
 
-Review the posted [solutions from the previous assignment](./solutions.py). Compare the posted solutions with your solutions. Notice the differences between your code and the solutions code and describe them. Trivial differences like the names of variables are not that important unless your names are really - I mean, *really -* weird.
+Review the posted [solutions from the previous assignment](./solutions_week03.py). Compare the posted solutions with your solutions. Notice the differences between your code and the solutions code and describe them. Trivial differences like the names of variables are not that important unless your names are really - I mean, *really -* weird.
 
 ## Frequent mistakes expected at this point
 
-**Returning an *f-string* without understanding how it works.** Function `greet` has only one statement:
-```python
-return f"Hello {name}. How are you?"
-```
-Do you really understand what the f-string is and how it works? Can you explain it during an interview? Using code that you are not certain about can cause problems. It's fine to look up how others solve similar problems -- it's important however that you understand how the solution works and be in position to describe your understading. **In your reflection** describe how the f-string works by discussing couple of different scenarios they can be used.
+* **Code has no comments** to demonstrate mastery of the program.
 
-**Iterating over a list without understanding how the `for` statement works.** Or, for that matter, how lists work. For-loops and lists are two core topics in programming. Everyone will expect you to know how the work and to be able to describe their functionality. **In your reflection** describe the for-statement iterates over a list by using a couple of examples.
+* **Code does not produce correct outputs** because it was not tested after completed.
 
-**Repeating arithmetic operations.** When solving the quadratic equation, the quantity $b^2-4ac$ plays a major role. If the equation has real solutions, we use the quantity (called the *discriminant)* in three places. We don't have to evaluate it everytime, i.e., we do not have to perform the operation `b*b-4*a*c` in three different places. That's where using a variable comes handy. We can define a variable
-```python
-discriminant = b*b - 4*a*c
-``` 
-and use it as needed without repeating the arithmetic.
+* **Code uses excessive logic** which may be the sign of AI-generated programs.
 
-**Code has no comments.** Your code needs to have comments. Avoid trivial comments like:
-```python
-# compute the discriminant
-discriminant = b*b-4*a*c
-```
-and try to come with more substative comments
-```python
-# compute the discriminant to use later for finding the real solutions
-discriminant = b*b-4*a*c
-```
+* **Code does not include type hints (annotations).** This is also typical with solutions found online or are AI-generated.
 
 ## Read more about:
 
