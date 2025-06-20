@@ -8,7 +8,7 @@ There is no final exam for the course. There will be a final assignemnt that wil
 
 # Code
 
-This assignment has 5 tasks. Write your code in file `week04.py`. The file comes with a bit of testing code. Do not modify the testing code. Write your methods *above* the testing code. If your methods are correct, running the testing code will show that you passed the tests. In addition to correct logic, your code must meet any specifications mentioned in the descriptions below.
+This assignment has 5 tasks. Write your code in file `week04.py`. The file comes with a bit of testing code. Do not modify the testing code. Write your methods *above* the testing code. If your methods are correct, running the testing code will show that you passed the tests. In addition to correct logic, your methods must have **one and only one** return statement each. Useful comments are required.
 
 
 ## Find the longest word
@@ -30,7 +30,7 @@ that returns the shortest word (that is the longest string) in list `words`.
 ## Find odd words
 Write a method with header
 ```python
-def odd_word(words: list[str]) -> list[str]:
+def odd_words(words: list[str]) -> list[str]:
 ```
 that returns a list with all the strings in list `words` whose length is an odd number.
 
@@ -38,7 +38,7 @@ that returns a list with all the strings in list `words` whose length is an odd 
 ## Find average words
 Write a method with header
 ```python
-def average_word(words: list[str]) -> list[str]:
+def average_words(words: list[str]) -> list[str]:
 ```
 that returns a list with all the strings in `words` whose length is $\pm 1$ from the average length of all strings in `words`.
 
@@ -48,7 +48,7 @@ Write a method with header
 ```python
 def intersect(foo: list[str], bar: list[str]) -> bool:
 ```
-that returns `True` if lists `foo` and `bar` have at least one element in common, anf `False` otherwise. This method must have one and only one return statement.
+that returns `True` if lists `foo` and `bar` have at least one element in common, anf `False` otherwise. 
 
 # Reflect
 
