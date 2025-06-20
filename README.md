@@ -1,4 +1,4 @@
-# COMP 170 SU25 WEEK 03
+# COMP 170 SU25 WEEK 04
 
 This assignment has two parts: a coding part based on current material we discuss in class and a reflection part to evaluate work you have already submitted.
 
@@ -8,51 +8,47 @@ There is no final exam for the course. There will be a final assignemnt that wil
 
 # Code
 
-## Diamond shape
+This assignment has 5 tasks. Write your code in file `week04.py`. The file comes with a bit of testing code. Do not modify the testing code. Write your methods *above* the testing code. If your methods are correct, running the testing code will show that you passed the tests. In addition to correct logic, your code must meet any specifications mentioned in the descriptions below.
 
-Write a function `draw_diamond` that draws a diamond shape of a specified height passed as a parameter to the function. To solve this problem, first think what instructions you'll give someone drawing the diamong by pressing three keys on their keyboard: the space key, the hash mark key, and the enter key. For example, here's a 5-lines diamond and the keyboard instructions. It's important to *discover* if there is a connection between the line number and the number of spaces and hash marks (hint: there is).
 
-```text
-  #     : 1st line : space space hash enter
- ###    : 2nd line : space hash hash hash enter
-#####   : 3rd line : hash hash hash hash hash enter
- ###    : 4th line : space hash hash hash enter
-  #     : 5th line : space space hash enter
+## Find the longest word
+Write a method with header
+```python
+def longest_word(words: list[str]) -> str:
 ```
-
-Solve this problem on paper first. Avoid the temptation to ask AI or to search online for a solution. It is an easy problem to code and the internet is full of solutions. This exercise however is about designing the solution on paper. Take out a piece of paper. Draw a few vertical and horizontal lines creating a square grid. Fill the squares to produce a diamond shape. Count the number of empty squares (spaces) and the number of filled squares (hashmarks) and discover how they relate to the line you are on (first line, second line etc.)
-
-## Right triangle
-
-Write a function `draw_right_triangle` that draws a right angle triangle whose height is specified as a parameter to the function.
+that returns the longest word (that is the longest string) in list `words`.
 
 
-## Compound interest
-
-Write a function `compound_interst` that computes the compound interest for a given amount, a given annual interest rate, and a given period of time. For example, over a 5 year period, an initial investment of $1,000, earning 5% interest will accumulate as follows:
-
-* 1st year: $1,000 principal + $1,000 x 0.05 interest = $1,050
-* 2nd year: $1,050 principal + $1,050 x 0.05 interest = $1,102.50
-* 3rd year: $1,102.50 principal + $1,102.50 x 0.05 interest = $1,157.62
-* 4th year: $1,157.62 principal + $1,157.62 x 0.05 interest = $1,215.50
-* 5th year = $1,215.50 principal + $1,215.50 x 0.05 interest = $1,276.27
-
-The amount of $1,276.27 is the compound interest for this specific example. Your function *should not use* any exponential operations. Just loops, additions, and multiplications.
-
-## Hollow square 
-
-Write a function `draw_hollow_square` that draws a square that is empty in the middle. The size of the square's and the thickness of its edge should be given as parameters. For example `draw_hollow_square(8,2)` should produce the following drawing:
-
-```text
-########
-########
-##    ## 
-##    ## 
-##    ## 
-##    ##  
-########
-########
+## Find the shortest word
+Write a method with header
+```python
+def shortest_word(words: list[str]) -> str:
 ```
+that returns the shortest word (that is the longest string) in list `words`.
+
+
+## Find odd words
+Write a method with header
+```python
+def odd_word(words: list[str]) -> list[str]:
+```
+that returns a list with all the strings in list `words` whose length is an odd number.
+
+
+## Find average words
+Write a method with header
+```python
+def average_word(words: list[str]) -> list[str]:
+```
+that returns a list with all the strings in `words` whose length is $\pm 1$ from the average length of all strings in `words`.
+
+
+## Find an intersection
+Write a method with header
+```python
+def intersect(foo: list[str], bar: list[str]) -> bool:
+```
+that returns `True` if lists `foo` and `bar` have at least one element in common, anf `False` otherwise. This method must have one and only one return statement.
 
 # Reflect
 
