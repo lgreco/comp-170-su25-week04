@@ -42,12 +42,13 @@ def draw_diamond(height: int, mark: str = "#", space: str = " ") -> None:
         spaces = space * (line - half)
         marks = mark * (2 * (height - line - 1) + 1)
         print(spaces + marks + spaces)
+    # end draw_diamond
 
 
 def draw_right_triangle(height: int, mark: str = "#", space: str = " ") -> None:
     """This is quite simple. But it may get a bit more complex if the user wishes
     to select which side of the triangles base will have the right angle. For example:
-    
+
     #        Easy to                     A bit more       #
     ##       draw                      difficult to      ##
     ###      triangle                     draw with     ###
@@ -62,18 +63,34 @@ def draw_right_triangle(height: int, mark: str = "#", space: str = " ") -> None:
         spaces = space * (height - 1 - line)
         marks = mark * (1 + line)
         print(marks + spaces)
+    # end draw_right_triangle
 
 
 def compound_interest(principal: float, rate: float, years: int) -> float:
-    """Straight forward!"""
+    """Straight forward! For every year, we multiply the principal by itself
+    plus the interest rate:
+    principal = (1 + rate)
+    and this becomes the new principal for the next iteration"""
     for year in range(years):
         principal = (1 + rate) * principal
     return principal
+    # end compound_interest
 
 
 def draw_hollow_square(
     size: int = 8, thickness: int = 2, mark: str = "#", space: str = " "
 ) -> None:
+    """The simplicity of this method is based on the realization that we use
+    just two types of line to pring. For example, using a (4,2) hollow square:
+
+    ****    <-- full line
+    *  *    <-- hollow line
+    *  *    <-- hollow line
+    ****    <-- full line
+
+    Our task then becomes to compute the two types of lines and determine which
+    one to print when during a for-loop.
+    """
     # Compute print elements once -- no need to compute these inside the loop as they are remain unchanged.
     full_line = mark * size
     hollow_line = (
@@ -88,7 +105,7 @@ def draw_hollow_square(
         else:
             # Print hollowed out line
             print(hollow_line)
-
+    # end draw_hollow_square
 
 # Test diamond shape:
 draw_diamond(-1)  # nothing to see
